@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font-family: "Open Sans", serif;
+}
+
+.nav {
+  background-color: #2a2d34;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f39c12;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #e67e22;
+}
+
+.topCenter {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.topList {
+  display: flex;
+  gap: 20px;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.topListItem {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.topListItem:hover {
+  color: #f39c12;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.topRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.separator {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.userName {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.userName:hover {
+  color: #f39c12;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #343a40;
+  color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 1000;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.dropdownLink {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdownLink:hover {
+  background-color: #f39c12;
+  color: #ffffff;
+}
+
+.userMenu:hover .dropdown {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .topCenter {
+    margin-top: 10px;
+  }
+
+  .topList {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .topRight {
+    margin-top: 10px;
+  }
+}
